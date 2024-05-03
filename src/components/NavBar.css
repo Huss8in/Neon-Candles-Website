@@ -1,0 +1,70 @@
+/* NavBar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4b4453; /* Dark background color */
+  padding: 20px 20px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  color: #f3eae3; /* Amazon-like orange color */
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 15px 62px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #f3eae3;
+  outline: none;
+  width: 300px; /* Adjust the width as per your preference */
+}
+
+.search-bar button {
+  padding: 16px 15px;
+  border-radius: 0 4px 4px 0;
+  background-color: #f3eae3; /* Amazon-like orange color */
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #f3eae3; /* Darker orange on hover */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  color: #fff; /* White text color */
+  text-decoration: none;
+  padding: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #ff9900; /* Orange color on hover */
+}
+
+.nav-item span {
+  margin-left: 5px;
+}

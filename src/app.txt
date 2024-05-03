@@ -1,0 +1,72 @@
+import React, { useState } from 'react';
+import './App.css';
+
+// Sample data for candles
+const candles = [
+  {
+    id: 1,
+    name: 'Lavender Candle',
+    description: 'A calming lavender scent.',
+    price: 12.99,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9SYISJJrgmQhHkzps8ZBR9pzCgE1jgba_wg&s',
+  },
+  {
+    id: 2,
+    name: 'Vanilla Candle',
+    description: 'A sweet vanilla aroma.',
+    price: 10.99,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9SYISJJrgmQhHkzps8ZBR9pzCgE1jgba_wg&s',
+  },
+  {
+    id: 3,
+    name: 'Cinnamon Candle',
+    description: 'A warm cinnamon fragrance.',
+    price: 14.99,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9SYISJJrgmQhHkzps8ZBR9pzCgE1jgba_wg&s',
+  },
+];
+
+function App() {
+  // State to track cart items
+  const [cart, setCart] = useState([]);
+
+  // Function to add item to cart
+  const addToCart = (candle) => {
+    setCart((prevCart) => [...prevCart, candle]);
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Candle Store</h1>
+      </header>
+      <div className="product-list">
+        {candles.map((candle) => (
+          <div key={candle.id} className="product-card">
+            <img src={candle.image} alt={candle.name} />
+            <h3>{candle.name}</h3>
+            <p>{candle.description}</p>
+            <p>${candle.price.toFixed(2)}</p>
+            <button onClick={() => addToCart(candle)}>Add to Cart</button>
+          </div>
+        ))}
+      </div>
+      <div className="cart">
+        <h2>Cart</h2>
+        {cart.length === 0 ? (
+          <p>Your cart is empty.</p>
+        ) : (
+          <ul>
+            {cart.map((item, index) => (
+              <li key={index}>
+                {item.name} - ${item.price.toFixed(2)}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,39 @@
+Item detail container
+.item-detail {
+  max-width: 800px; /* Adjust the max width as needed */
+  margin: 0 auto; /* Center the detail container */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Candle name style */
+.item-detail h2 {
+  font-size: 2rem; /* Adjust the font size as needed */
+  margin-bottom: 10px;
+  color: #333; /* Dark text color */
+}
+
+/* Candle image style */
+.candle-image {
+  width: 100%; /* Full width */
+  max-height: 300px; /* Adjust the height as needed */
+  object-fit: cover;
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 15px;
+}
+
+/* Candle description style */
+.item-detail p {
+  font-size: 1rem; /* Adjust the font size as needed */
+  color: #555; /* Dark gray text color */
+  margin-bottom: 10px;
+}
+
+/* Candle price style */
+.item-detail p:last-of-type {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: #4caf50; /* Green color for price */
+}
